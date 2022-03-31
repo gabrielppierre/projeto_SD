@@ -37,14 +37,31 @@
 
 
 set_global_assignment -name FAMILY "Cyclone IV E"
-set_global_assignment -name DEVICE Auto
-set_global_assignment -name TOP_LEVEL_ENTITY projeto_SD
+set_global_assignment -name DEVICE AUTO
+set_global_assignment -name TOP_LEVEL_ENTITY "somador-subtrator"
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "9.1 SP2"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "22:10:49  MARCH 26, 2022"
-set_global_assignment -name LAST_QUARTUS_VERSION "21.1.0 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "9.1 SP2"
 set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
+set_global_assignment -name BDF_FILE modulos/1adder.bdf
+set_global_assignment -name BDF_FILE modulos/4adder.bdf
+set_global_assignment -name BDF_FILE modulos/complemento.bdf
+set_global_assignment -name BDF_FILE "modulos/somador-subtrator.bdf"
 set_global_assignment -name BDF_FILE modulos/comparadores.bdf
 set_global_assignment -name BDF_FILE modulos/comparador.bdf
 set_global_assignment -name BDF_FILE modulos/mux.bdf
 set_global_assignment -name BDF_FILE modulos/porta_and.bdf
 set_global_assignment -name BDF_FILE modulos/porta_xor.bdf
+set_global_assignment -name BDF_FILE modulos/comp4.bdf
+set_global_assignment -name BDF_FILE modulos/complemento4bits.bdf
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name LL_ROOT_REGION ON -entity projeto_SD -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -entity projeto_SD -section_id "Root Region"
+set_global_assignment -name VECTOR_WAVEFORM_FILE modulos/teste.vwf
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_formal_verification
+set_global_assignment -name USE_CONFIGURATION_DEVICE OFF
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE modulos/teste.vwf
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
