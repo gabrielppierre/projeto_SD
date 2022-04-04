@@ -208,17 +208,7 @@ Sinal_soma => inst.IN0
 
 |projeto_SD|ULA:inst|somador-subtrator:inst9
 sinal <= inst13.DB_MAX_OUTPUT_PORT_TYPE
-SUB => inst3.IN0
-B[4] => inst3.IN1
-B[3] => comp4:inst4.B[3]
-B[3] => complemento4bits:inst.B[3]
-B[2] => comp4:inst4.B[2]
-B[2] => complemento4bits:inst.B[2]
-B[1] => comp4:inst4.B[1]
-B[1] => complemento4bits:inst.B[1]
-B[0] => comp4:inst4.B[0]
-B[0] => complemento4bits:inst.B[0]
-A[4] => inst12.IN0
+A[4] => inst11.IN0
 A[4] => complemento4bits:inst8.carry_in
 A[3] => comp4:inst4.A[3]
 A[3] => complemento4bits:inst8.B[3]
@@ -228,6 +218,16 @@ A[1] => comp4:inst4.A[1]
 A[1] => complemento4bits:inst8.B[1]
 A[0] => comp4:inst4.A[0]
 A[0] => complemento4bits:inst8.B[0]
+B[4] => inst3.IN1
+B[3] => comp4:inst4.B[3]
+B[3] => complemento4bits:inst.B[3]
+B[2] => comp4:inst4.B[2]
+B[2] => complemento4bits:inst.B[2]
+B[1] => comp4:inst4.B[1]
+B[1] => complemento4bits:inst.B[1]
+B[0] => comp4:inst4.B[0]
+B[0] => complemento4bits:inst.B[0]
+SUB => inst3.IN0
 F[4] <= complemento:inst5.B2[4]
 F[3] <= complemento:inst5.B2[3]
 F[2] <= complemento:inst5.B2[2]
@@ -236,17 +236,19 @@ F[0] <= complemento:inst5.B2[0]
 
 
 |projeto_SD|ULA:inst|somador-subtrator:inst9|comp4:inst4
-EQ <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+EQ <= inst22.DB_MAX_OUTPUT_PORT_TYPE
 A[3] => comparadores:inst.A
+A[3] => inst5.IN1
 A[2] => comparadores:inst1.A
 A[1] => comparadores:inst2.A
 A[0] => comparadores:inst3.A
 B[3] => comparadores:inst.B
+B[3] => inst5.IN0
 B[2] => comparadores:inst1.B
 B[1] => comparadores:inst2.B
 B[0] => comparadores:inst3.B
-GT <= comparadores:inst3.LT
-LT <= comparadores:inst3.GT
+GT <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+LT <= inst9.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |projeto_SD|ULA:inst|somador-subtrator:inst9|comp4:inst4|comparadores:inst3
@@ -573,17 +575,7 @@ cout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 
 |projeto_SD|ULA:inst|somador-subtrator:inst
 sinal <= inst13.DB_MAX_OUTPUT_PORT_TYPE
-SUB => inst3.IN0
-B[4] => inst3.IN1
-B[3] => comp4:inst4.B[3]
-B[3] => complemento4bits:inst.B[3]
-B[2] => comp4:inst4.B[2]
-B[2] => complemento4bits:inst.B[2]
-B[1] => comp4:inst4.B[1]
-B[1] => complemento4bits:inst.B[1]
-B[0] => comp4:inst4.B[0]
-B[0] => complemento4bits:inst.B[0]
-A[4] => inst12.IN0
+A[4] => inst11.IN0
 A[4] => complemento4bits:inst8.carry_in
 A[3] => comp4:inst4.A[3]
 A[3] => complemento4bits:inst8.B[3]
@@ -593,6 +585,16 @@ A[1] => comp4:inst4.A[1]
 A[1] => complemento4bits:inst8.B[1]
 A[0] => comp4:inst4.A[0]
 A[0] => complemento4bits:inst8.B[0]
+B[4] => inst3.IN1
+B[3] => comp4:inst4.B[3]
+B[3] => complemento4bits:inst.B[3]
+B[2] => comp4:inst4.B[2]
+B[2] => complemento4bits:inst.B[2]
+B[1] => comp4:inst4.B[1]
+B[1] => complemento4bits:inst.B[1]
+B[0] => comp4:inst4.B[0]
+B[0] => complemento4bits:inst.B[0]
+SUB => inst3.IN0
 F[4] <= complemento:inst5.B2[4]
 F[3] <= complemento:inst5.B2[3]
 F[2] <= complemento:inst5.B2[2]
@@ -601,17 +603,19 @@ F[0] <= complemento:inst5.B2[0]
 
 
 |projeto_SD|ULA:inst|somador-subtrator:inst|comp4:inst4
-EQ <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+EQ <= inst22.DB_MAX_OUTPUT_PORT_TYPE
 A[3] => comparadores:inst.A
+A[3] => inst5.IN1
 A[2] => comparadores:inst1.A
 A[1] => comparadores:inst2.A
 A[0] => comparadores:inst3.A
 B[3] => comparadores:inst.B
+B[3] => inst5.IN0
 B[2] => comparadores:inst1.B
 B[1] => comparadores:inst2.B
 B[0] => comparadores:inst3.B
-GT <= comparadores:inst3.LT
-LT <= comparadores:inst3.GT
+GT <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+LT <= inst9.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |projeto_SD|ULA:inst|somador-subtrator:inst|comp4:inst4|comparadores:inst3

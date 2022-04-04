@@ -1,7 +1,7 @@
 Quartus II
 Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 12
-3700
+1222
 OFF
 OFF
 OFF
@@ -47,7 +47,7 @@ db|projeto_SD.(1).cnf
 # case_insensitive
 # source_file
 projeto_sd|ula.bdf
-d9b85b488c3c3c08a7a29a5f26c958d
+5198b8f1b62062a3bf7eff1e7683d8fc
 26
 # internal_option {
 BLOCK_DESIGN_NAMING
@@ -132,14 +132,34 @@ ULA:inst|somador-subtrator:inst|comp4:inst4|comparadores:inst
 
 # end
 # entity
-somador-subtrator
+mux_sinal
 # storage
 db|projeto_SD.(5).cnf
 db|projeto_SD.(5).cnf
 # case_insensitive
 # source_file
+projeto_sd|mux_sinal.bdf
+b037a3ece1ad91a0cd785a313034d03e
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+ULA:inst|mux_sinal:inst11
+}
+# macro_sequence
+
+# end
+# entity
+somador-subtrator
+# storage
+db|projeto_SD.(6).cnf
+db|projeto_SD.(6).cnf
+# case_insensitive
+# source_file
 modulos|somador-subtrator.bdf
-35ea9bbb6c37fef863d8561c23941611
+7534b27d392c4b499493bd739164be
 26
 # internal_option {
 BLOCK_DESIGN_NAMING
@@ -155,12 +175,12 @@ ULA:inst|somador-subtrator:inst
 # entity
 comp4
 # storage
-db|projeto_SD.(6).cnf
-db|projeto_SD.(6).cnf
+db|projeto_SD.(7).cnf
+db|projeto_SD.(7).cnf
 # case_insensitive
 # source_file
 modulos|comp4.bdf
-dada2f8cca711b2f22a5bcddeae71a
+9db24e70b836dadcddcdf3396c4daae1
 26
 # internal_option {
 BLOCK_DESIGN_NAMING
@@ -176,8 +196,8 @@ ULA:inst|somador-subtrator:inst|comp4:inst4
 # entity
 complemento
 # storage
-db|projeto_SD.(7).cnf
-db|projeto_SD.(7).cnf
+db|projeto_SD.(8).cnf
+db|projeto_SD.(8).cnf
 # case_insensitive
 # source_file
 modulos|complemento.bdf
@@ -198,8 +218,8 @@ ULA:inst|complemento:inst6
 # entity
 1adder
 # storage
-db|projeto_SD.(8).cnf
-db|projeto_SD.(8).cnf
+db|projeto_SD.(9).cnf
+db|projeto_SD.(9).cnf
 # case_insensitive
 # source_file
 modulos|1adder.bdf
@@ -256,8 +276,8 @@ ULA:inst|complemento:inst6|1adder:inst4
 # entity
 4adder
 # storage
-db|projeto_SD.(9).cnf
-db|projeto_SD.(9).cnf
+db|projeto_SD.(10).cnf
+db|projeto_SD.(10).cnf
 # case_insensitive
 # source_file
 modulos|4adder.bdf
@@ -277,8 +297,8 @@ ULA:inst|somador-subtrator:inst|4adder:inst2
 # entity
 complemento4bits
 # storage
-db|projeto_SD.(10).cnf
-db|projeto_SD.(10).cnf
+db|projeto_SD.(11).cnf
+db|projeto_SD.(11).cnf
 # case_insensitive
 # source_file
 modulos|complemento4bits.bdf
@@ -300,8 +320,8 @@ ULA:inst|somador-subtrator:inst|complemento4bits:inst
 # entity
 mux_5bits
 # storage
-db|projeto_SD.(11).cnf
-db|projeto_SD.(11).cnf
+db|projeto_SD.(12).cnf
+db|projeto_SD.(12).cnf
 # case_insensitive
 # source_file
 projeto_sd|mux_5bits.bdf
@@ -320,8 +340,8 @@ ULA:inst|mux_5bits:inst8
 # entity
 porta_and
 # storage
-db|projeto_SD.(12).cnf
-db|projeto_SD.(12).cnf
+db|projeto_SD.(13).cnf
+db|projeto_SD.(13).cnf
 # case_insensitive
 # source_file
 modulos|porta_and.bdf
@@ -340,8 +360,8 @@ ULA:inst|porta_and:inst4
 # entity
 porta_xor
 # storage
-db|projeto_SD.(13).cnf
-db|projeto_SD.(13).cnf
+db|projeto_SD.(14).cnf
+db|projeto_SD.(14).cnf
 # case_insensitive
 # source_file
 modulos|porta_xor.bdf
@@ -353,26 +373,6 @@ AUTO
 }
 # hierarchies {
 ULA:inst|porta_xor:inst5
-}
-# macro_sequence
-
-# end
-# entity
-mux_sinal
-# storage
-db|projeto_SD.(14).cnf
-db|projeto_SD.(14).cnf
-# case_insensitive
-# source_file
-projeto_sd|mux_sinal.bdf
-b037a3ece1ad91a0cd785a313034d03e
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-ULA:inst|mux_sinal:inst11
 }
 # macro_sequence
 

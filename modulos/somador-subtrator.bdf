@@ -510,7 +510,7 @@ applicable agreement for further details.
 )
 (connector
 	(pt 256 144)
-	(pt 256 168)
+	(pt 256 160)
 	(bus)
 )
 (connector
@@ -568,22 +568,6 @@ applicable agreement for further details.
 	(pt 424 64)
 )
 (connector
-	(pt 368 -120)
-	(pt 368 176)
-)
-(connector
-	(pt 368 176)
-	(pt 368 240)
-)
-(connector
-	(pt 768 -120)
-	(pt 760 -120)
-)
-(connector
-	(pt 760 -120)
-	(pt 760 -160)
-)
-(connector
 	(pt 288 64)
 	(pt 288 -160)
 )
@@ -595,22 +579,6 @@ applicable agreement for further details.
 	(text "A[4]" (rect 320 48 340 60)(font "Arial" ))
 	(pt 288 64)
 	(pt 264 64)
-)
-(connector
-	(pt 288 -160)
-	(pt 760 -160)
-)
-(connector
-	(pt 368 -120)
-	(pt 736 -120)
-)
-(connector
-	(pt 768 -40)
-	(pt 736 -40)
-)
-(connector
-	(pt 736 -120)
-	(pt 736 -40)
 )
 (connector
 	(pt 936 136)
@@ -628,8 +596,38 @@ applicable agreement for further details.
 	(pt 936 -104)
 	(pt 1072 -104)
 )
+(connector
+	(pt 256 160)
+	(pt 256 168)
+	(bus)
+)
+(connector
+	(pt 288 -160)
+	(pt 744 -160)
+)
+(connector
+	(pt 368 -120)
+	(pt 368 176)
+)
+(connector
+	(pt 368 176)
+	(pt 368 240)
+)
+(connector
+	(pt 744 -40)
+	(pt 744 -160)
+)
+(connector
+	(pt 744 -40)
+	(pt 768 -40)
+)
+(connector
+	(pt 768 -120)
+	(pt 368 -120)
+)
 (junction (pt 264 32))
 (junction (pt 256 168))
 (junction (pt 368 176))
 (junction (pt 288 64))
 (junction (pt 936 -104))
+(junction (pt 256 160))

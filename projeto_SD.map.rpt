@@ -1,5 +1,5 @@
 Analysis & Synthesis report for projeto_SD
-Mon Apr 04 20:27:35 2022
+Mon Apr 04 20:55:16 2022
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -40,13 +40,13 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +------------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Apr 04 20:27:35 2022        ;
+; Analysis & Synthesis Status        ; Successful - Mon Apr 04 20:55:16 2022        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; projeto_SD                                   ;
 ; Top-level Entity Name              ; projeto_SD                                   ;
 ; Family                             ; Cyclone IV E                                 ;
-; Total logic elements               ; 96                                           ;
-;     Total combinational functions  ; 96                                           ;
+; Total logic elements               ; 87                                           ;
+;     Total combinational functions  ; 87                                           ;
 ;     Dedicated logic registers      ; 0                                            ;
 ; Total registers                    ; 0                                            ;
 ; Total pins                         ; 20                                           ;
@@ -62,6 +62,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE115F29C7      ;                    ;
 ; Top-level entity name                                                      ; projeto_SD         ; projeto_SD         ;
 ; Family name                                                                ; Cyclone IV E       ; Cyclone IV GX      ;
 ; Use Generated Physical Constraints File                                    ; Off                ;                    ;
@@ -176,16 +177,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+------------+
 ; Resource                                    ; Usage      ;
 +---------------------------------------------+------------+
-; Estimated Total logic elements              ; 96         ;
+; Estimated Total logic elements              ; 87         ;
 ;                                             ;            ;
-; Total combinational functions               ; 96         ;
+; Total combinational functions               ; 87         ;
 ; Logic element usage by number of LUT inputs ;            ;
-;     -- 4 input functions                    ; 70         ;
-;     -- 3 input functions                    ; 13         ;
-;     -- <=2 input functions                  ; 13         ;
+;     -- 4 input functions                    ; 65         ;
+;     -- 3 input functions                    ; 14         ;
+;     -- <=2 input functions                  ; 8          ;
 ;                                             ;            ;
 ; Logic elements by mode                      ;            ;
-;     -- normal mode                          ; 96         ;
+;     -- normal mode                          ; 87         ;
 ;     -- arithmetic mode                      ; 0          ;
 ;                                             ;            ;
 ; Total registers                             ; 0          ;
@@ -194,9 +195,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                                             ;            ;
 ; I/O pins                                    ; 20         ;
 ; Maximum fan-out node                        ; B[0]~input ;
-; Maximum fan-out                             ; 18         ;
-; Total fan-out                               ; 372        ;
-; Average fan-out                             ; 2.74       ;
+; Maximum fan-out                             ; 17         ;
+; Total fan-out                               ; 345        ;
+; Average fan-out                             ; 2.72       ;
 +---------------------------------------------+------------+
 
 
@@ -205,40 +206,38 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node        ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                            ; Library Name ;
 +-----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------+--------------+
-; |projeto_SD                       ; 96 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 20   ; 0            ; |projeto_SD                                                                    ; work         ;
-;    |ULA:inst|                     ; 96 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_SD|ULA:inst                                                           ;              ;
-;       |comparador:inst7|          ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_SD|ULA:inst|comparador:inst7                                          ; work         ;
+; |projeto_SD                       ; 87 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 20   ; 0            ; |projeto_SD                                                                    ; work         ;
+;    |ULA:inst|                     ; 87 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_SD|ULA:inst                                                           ;              ;
+;       |comparador:inst7|          ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_SD|ULA:inst|comparador:inst7                                          ; work         ;
 ;          |comparadores:inst2|     ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_SD|ULA:inst|comparador:inst7|comparadores:inst2                       ; work         ;
-;          |comparadores:inst3|     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_SD|ULA:inst|comparador:inst7|comparadores:inst3                       ; work         ;
-;          |comparadores:inst4|     ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_SD|ULA:inst|comparador:inst7|comparadores:inst4                       ; work         ;
-;       |complemento:inst6|         ; 4 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_SD|ULA:inst|complemento:inst6                                         ; work         ;
+;       |complemento:inst6|         ; 4 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_SD|ULA:inst|complemento:inst6                                         ; work         ;
 ;          |1adder:inst2|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_SD|ULA:inst|complemento:inst6|1adder:inst2                            ; work         ;
-;          |1adder:inst3|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_SD|ULA:inst|complemento:inst6|1adder:inst3                            ; work         ;
-;       |mux_1bit:inst3|            ; 11 (11)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_SD|ULA:inst|mux_1bit:inst3                                            ; work         ;
-;       |mux_5bits:inst8|           ; 36 (36)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_SD|ULA:inst|mux_5bits:inst8                                           ; work         ;
+;       |mux_1bit:inst3|            ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_SD|ULA:inst|mux_1bit:inst3                                            ; work         ;
+;       |mux_5bits:inst8|           ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_SD|ULA:inst|mux_5bits:inst8                                           ; work         ;
 ;       |mux_sinal:inst11|          ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_SD|ULA:inst|mux_sinal:inst11                                          ; work         ;
-;       |somador-subtrator:inst9|   ; 12 (2)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_SD|ULA:inst|somador-subtrator:inst9                                   ; work         ;
+;       |somador-subtrator:inst9|   ; 13 (2)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_SD|ULA:inst|somador-subtrator:inst9                                   ; work         ;
 ;          |4adder:inst2|           ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_SD|ULA:inst|somador-subtrator:inst9|4adder:inst2                      ; work         ;
 ;             |1adder:inst1|        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_SD|ULA:inst|somador-subtrator:inst9|4adder:inst2|1adder:inst1         ; work         ;
 ;             |1adder:inst2|        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_SD|ULA:inst|somador-subtrator:inst9|4adder:inst2|1adder:inst2         ; work         ;
 ;             |1adder:inst3|        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_SD|ULA:inst|somador-subtrator:inst9|4adder:inst2|1adder:inst3         ; work         ;
 ;          |complemento4bits:inst|  ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_SD|ULA:inst|somador-subtrator:inst9|complemento4bits:inst             ; work         ;
-;          |complemento:inst5|      ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_SD|ULA:inst|somador-subtrator:inst9|complemento:inst5                 ; work         ;
-;             |1adder:inst2|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_SD|ULA:inst|somador-subtrator:inst9|complemento:inst5|1adder:inst2    ; work         ;
-;       |somador-subtrator:inst|    ; 19 (2)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_SD|ULA:inst|somador-subtrator:inst                                    ; work         ;
+;          |complemento:inst5|      ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_SD|ULA:inst|somador-subtrator:inst9|complemento:inst5                 ; work         ;
+;             |1adder:inst2|        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_SD|ULA:inst|somador-subtrator:inst9|complemento:inst5|1adder:inst2    ; work         ;
+;       |somador-subtrator:inst|    ; 22 (1)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_SD|ULA:inst|somador-subtrator:inst                                    ; work         ;
 ;          |4adder:inst2|           ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_SD|ULA:inst|somador-subtrator:inst|4adder:inst2                       ; work         ;
 ;             |1adder:inst1|        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_SD|ULA:inst|somador-subtrator:inst|4adder:inst2|1adder:inst1          ; work         ;
 ;             |1adder:inst2|        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_SD|ULA:inst|somador-subtrator:inst|4adder:inst2|1adder:inst2          ; work         ;
 ;             |1adder:inst3|        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_SD|ULA:inst|somador-subtrator:inst|4adder:inst2|1adder:inst3          ; work         ;
-;          |comp4:inst4|            ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_SD|ULA:inst|somador-subtrator:inst|comp4:inst4                        ; work         ;
+;          |comp4:inst4|            ; 7 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_SD|ULA:inst|somador-subtrator:inst|comp4:inst4                        ; work         ;
 ;             |comparadores:inst1|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_SD|ULA:inst|somador-subtrator:inst|comp4:inst4|comparadores:inst1     ; work         ;
 ;             |comparadores:inst2|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_SD|ULA:inst|somador-subtrator:inst|comp4:inst4|comparadores:inst2     ; work         ;
+;             |comparadores:inst3|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_SD|ULA:inst|somador-subtrator:inst|comp4:inst4|comparadores:inst3     ; work         ;
 ;          |complemento4bits:inst8| ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_SD|ULA:inst|somador-subtrator:inst|complemento4bits:inst8             ; work         ;
 ;          |complemento4bits:inst|  ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_SD|ULA:inst|somador-subtrator:inst|complemento4bits:inst              ; work         ;
 ;             |1adder:inst1|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_SD|ULA:inst|somador-subtrator:inst|complemento4bits:inst|1adder:inst1 ; work         ;
 ;             |1adder:inst2|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_SD|ULA:inst|somador-subtrator:inst|complemento4bits:inst|1adder:inst2 ; work         ;
-;          |complemento:inst5|      ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_SD|ULA:inst|somador-subtrator:inst|complemento:inst5                  ; work         ;
-;             |1adder:inst2|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_SD|ULA:inst|somador-subtrator:inst|complemento:inst5|1adder:inst2     ; work         ;
+;          |complemento:inst5|      ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_SD|ULA:inst|somador-subtrator:inst|complemento:inst5                  ; work         ;
+;             |1adder:inst2|        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_SD|ULA:inst|somador-subtrator:inst|complemento:inst5|1adder:inst2     ; work         ;
 +-----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -264,7 +263,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Mon Apr 04 20:27:30 2022
+    Info: Processing started: Mon Apr 04 20:55:11 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off projeto_SD -c projeto_SD
 Info: Found 1 design units, including 1 entities, in source file projeto_sd/mux_sinal.bdf
     Info: Found entity 1: mux_sinal
@@ -315,14 +314,14 @@ Info: Elaborating entity "mux_5bits" for hierarchy "ULA:inst|mux_5bits:inst8"
 Info: Elaborating entity "porta_and" for hierarchy "ULA:inst|porta_and:inst4"
 Info: Elaborating entity "porta_xor" for hierarchy "ULA:inst|porta_xor:inst5"
 Info: Timing-Driven Synthesis is running
-Info: Implemented 116 device resources after synthesis - the final resource count might be different
+Info: Implemented 107 device resources after synthesis - the final resource count might be different
     Info: Implemented 13 input pins
     Info: Implemented 7 output pins
-    Info: Implemented 96 logic cells
+    Info: Implemented 87 logic cells
 Info: Quartus II Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 219 megabytes
-    Info: Processing ended: Mon Apr 04 20:27:35 2022
+    Info: Peak virtual memory: 220 megabytes
+    Info: Processing ended: Mon Apr 04 20:55:16 2022
     Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:06
+    Info: Total CPU time (on all processors): 00:00:07
 
 
