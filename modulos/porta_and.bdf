@@ -24,7 +24,7 @@ applicable agreement for further details.
 	(input)
 	(rect 112 40 280 56)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
-	(text "A[4..0]" (rect 5 0 38 12)(font "Arial" ))
+	(text "A[0..4]" (rect 5 0 38 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 92 12)(pt 117 12)(line_width 1))
@@ -40,7 +40,7 @@ applicable agreement for further details.
 	(input)
 	(rect 112 88 280 104)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
-	(text "B[4..0]" (rect 5 0 38 12)(font "Arial" ))
+	(text "B[0..4]" (rect 5 0 38 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 92 12)(pt 117 12)(line_width 1))
@@ -56,7 +56,7 @@ applicable agreement for further details.
 	(output)
 	(rect 472 64 648 80)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "F[4..0]" (rect 90 0 123 12)(font "Arial" ))
+	(text "F[0..4]" (rect 90 0 123 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8)(line_width 1))
@@ -101,12 +101,6 @@ applicable agreement for further details.
 	)
 )
 (connector
-	(text "A[4..0]" (rect 290 32 323 44)(font "Arial" ))
-	(pt 280 48)
-	(pt 328 48)
-	(bus)
-)
-(connector
 	(pt 328 64)
 	(pt 328 48)
 	(bus)
@@ -114,12 +108,6 @@ applicable agreement for further details.
 (connector
 	(pt 328 64)
 	(pt 368 64)
-	(bus)
-)
-(connector
-	(text "B[4..0]" (rect 290 80 323 92)(font "Arial" ))
-	(pt 280 96)
-	(pt 328 96)
 	(bus)
 )
 (connector
@@ -133,7 +121,19 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "F[4..0]" (rect 442 56 475 68)(font "Arial" ))
+	(text "<<__$DEF_ALIAS284>>" (rect 290 32 408 44)(font "Arial" )(invisible))
+	(pt 280 48)
+	(pt 328 48)
+	(bus)
+)
+(connector
+	(text "<<__$DEF_ALIAS286>>" (rect 290 80 408 92)(font "Arial" )(invisible))
+	(pt 280 96)
+	(pt 328 96)
+	(bus)
+)
+(connector
+	(text "<<__$DEF_ALIAS288>>" (rect 442 56 560 68)(font "Arial" )(invisible))
 	(pt 432 72)
 	(pt 472 72)
 	(bus)
